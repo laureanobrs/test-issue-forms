@@ -1,0 +1,26 @@
+name: New issue
+description: Please choose a type and fill in details.
+title: "[{type}] <short summary>"
+labels:
+  - triage
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      description: What kind of issue is this?
+      options:
+        - Bug
+        - Feature request
+        - Documentation
+        - Question
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened / what do you need?
+    validations:
+      required: true
